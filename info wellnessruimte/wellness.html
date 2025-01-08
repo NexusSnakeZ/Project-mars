@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaceship Wellnessruimte</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(145deg, #1a002b, #004e92);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        h1, h2 {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 20px 0;
+        }
+
+        h1 {
+            color: #00c9ff;
+            text-shadow: 0 0 15px #00c9ff;
+        }
+
+        .wellness-container {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00c9ff;
+            border-radius: 15px;
+            box-shadow: 0 0 25px #00c9ff, inset 0 0 10px #004e92;
+        }
+
+        .wellness-container h2 {
+            color: #00c9ff;
+        }
+
+        .wellness-container p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+
+        .wellness-container ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .wellness-container ul li {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            background: linear-gradient(145deg, #004e92, #004e92);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #004e92;
+        }
+
+        .back-button {
+            display: inline-block;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #00c9ff;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 0 15px #00c9ff;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #00c9ff;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Wellnessruimte</h1>
+    <div class="wellness-container">
+        <h2>Welkom aan boord</h2>
+        <p>
+            De <strong>Wellnessruimte</strong> biedt u een plek om te ontspannen en tot rust te komen tijdens uw epische reis naar Mars. 
+            We hebben geavanceerde technologieën en innovatieve ruimtes gecreëerd om uw lichaam en geest optimaal te verzorgen.
+        </p>
+
+        <h2>Faciliteiten:</h2>
+        <ul>
+            <li><strong>Zero-G Meditatieruimte:</strong> Laat de zwaartekracht los en ontdek ultieme innerlijke rust in een zwevende omgeving.</li>
+            <li><strong>Ruimtetherapie Pods:</strong> Geniet van ontspannende geluidsgolven en lichttherapie om uw energie te herstellen.</li>
+            <li><strong>Kosmische Spa:</strong> Een futuristische spa met anti-zwaartekracht massages en hydraterende ruimtebehandelingen.</li>
+            <li><strong>Stellaire Yoga Studio:</strong> Yoga in een omgeving zonder zwaartekracht, ideaal voor flexibiliteit en mindfulness.</li>
+            <li><strong>Fitness Orbit:</strong> Een gym uitgerust met apparatuur speciaal ontworpen voor gebruik in de ruimte.</li>
+        </ul>
+
+        <p>
+            Onze wellnessruimte is ontworpen met uw comfort en welzijn in gedachten. Ontspan, laad op en geniet van de reis van uw leven.
+        </p>
+    </div>
+
+    <button class="back-button" onclick="history.back()" aria-label="Ga terug naar de vorige pagina">Ga Terug</button>
+</body>
+</html>
