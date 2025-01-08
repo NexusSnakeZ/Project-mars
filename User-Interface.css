@@ -1,0 +1,32 @@
+header{
+
+}
+
+.Logo {
+  position: fixed;  
+  width: 60px;
+}
+
+.Logo img {
+    width: 100%;
+}
+
+
+
+body{
+    background-image: url(Home.Screen.png);
+    background-size: cover;
+    background-position:center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+   position: sticky;
+   margin-top: auto;
+}
+
+.ButtonDesign{
+    
+}
+
