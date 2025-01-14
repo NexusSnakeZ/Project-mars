@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBook Checkout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(145deg, #000428, #004e92);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 20px 0;
+            color: #00c9ff;
+            text-shadow: 0 0 15px #00c9ff;
+        }
+
+        .menu-container, .checkout-container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00c9ff;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #00c9ff, inset 0 0 5px #004e92;
+        }
+
+        .menu-item, .checkout-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #00c9ff;
+        }
+
+        .menu-item:last-child, .checkout-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item h2, .checkout-item h2 {
+            font-size: 1.2rem;
+            color: #00ffea;
+            margin: 0;
+        }
+
+        .menu-item .price, .checkout-item .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+
+        .menu-item button, .checkout-item button {
+            background: #ff6b6b;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 0 15px #ff6b6b;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .menu-item button:hover, .checkout-item button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #ff6b6b;
+        }
+
+        .total {
+            text-align: right;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #ff6b6b;
+        }
+
+        .checkout-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .checkout-buttons button {
+            background: #00c9ff;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 0 15px #00c9ff;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .checkout-buttons button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #00c9ff;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.8rem;
+            color: #fff;
+        }
+    </style>
+    <script>
+        let cart = [];
+        function addItem(name, price) {
+            cart.push({ name, price });
+            renderCart();
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            renderCart();
+        }
+
+        function renderCart() {
+            const container = document.getElementById('cart-items');
+            const totalElement = document.getElementById('total');
+            container.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'checkout-item';
+                itemDiv.innerHTML = `
+                    <h2>${item.name}</h2>
+                    <span class="price">€${item.price.toFixed(2)}</span>
+                    <button onclick="removeItem(${index})">Remove</button>
+                `;
+                container.appendChild(itemDiv);
+            });
+
+            totalElement.textContent = `Total: €${total.toFixed(2)}`;
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            alert('Thank you for your purchase!');
+            cart = [];
+            renderCart();
+        }
+    </script>
+</head>
+<body>
+    <h1>eBook Checkout</h1>
+    <div class="menu-container">
+        <div class="menu-item">
+            <h2>De Kosmische Reiziger</h2>
+            <span class="price">€12.99</span>
+            <button onclick="addItem('De Kosmische Reiziger', 12.99)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>Galactische Geheimen</h2>
+            <span class="price">€9.99</span>
+            <button onclick="addItem('Galactische Geheimen', 9.99)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>Sterrensprong</h2>
+            <span class="price">€14.99</span>
+            <button onclick="addItem('Sterrensprong', 14.99)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>Zero-G Avontuur</h2>
+            <span class="price">€8.99</span>
+            <button onclick="addItem('Zero-G Avontuur', 8.99)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>Space War Arena</h2>
+            <span class="price">€13.49</span>
+            <button onclick="addItem('Space War Arena', 13.49)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="checkout-container">
+        <div id="cart-items">
+            <!-- Items will be dynamically added here -->
+        </div>
+        <div class="total" id="total">Total: €0.00</div>
+        <div class="checkout-buttons">
+            <button onclick="checkout()">Complete Purchase</button>
+            <button onclick="history.back()">Go Back</button>
+        </div>
+    </div>
+    <footer>
+        eBook Store Checkout &copy; 2024 - Read Beyond Limits
+    </footer>
+</body>
+</html>
