@@ -17,15 +17,15 @@ main {
 
 
 
-body{
-    background-image: url(Home.Screen.png);
-    background-size: cover;
-    background-position:center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0%;
-    overflow: hidden;
+body {
+  background-image: url(Home.Screen.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0%;
+  overflow: hidden;
 }
 
 footer {
@@ -41,45 +41,54 @@ footer {
   align-items: center;
   padding: 20px;
 }
+
 .ButtonDesign {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 150px;
-  margin-bottom: 20px;
+  justify-content: space-between;  /* Spread the links across the footer */
+  gap: 20px;  /* Increase the gap between links */
+  width: 100%;
+  max-width: 1100px;  /* Increase the max width of the button area */
+  padding-left: 75px;  /* Keep the padding to align with the polygon dip */
+  margin-top: 50px;  /* Move the links down by 50px */
 }
 
-.ButtonDesign button {
+.button-link {
   background-color: #fff;
   color: #2785B4;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  text-decoration: none; /* Remove underline from links */
+  padding: 15px 30px;  /* Increase the padding to make the links bigger */
+  font-size: 24px;  /* Increase the font size for the icons */
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.ButtonDesign button:hover {
+.button-link:hover {
   background-color: #2785B4;
   color: #fff;
 }
 
-.Welcome-message{
-  color: purple;
+.Welcome-message {
+  color: rgb(180, 201, 207);
   text-align: center;
   font-style: italic;
-  font-size: 1.3em;
-  animation: ease-in 0,8s;
+  font-size: 2em;
+  animation: easeInAnimation 0.8s ease-in;
   margin-top: 400px;
   margin-bottom: 400px;
   padding-right: 0px;
   padding-left: 0px;
-  border-left-width: 10‒;
+  border-left-width: 10px;
   border-right-width: 10px;
   display: flex;
   justify-content: center;
   flex-direction: row;
+  text-shadow: #a7c6d5 1px 1px 40px, rgb(12, 0, 0) 1px 1px;
+  background-color: #475ab1a9;
+  border-radius: 45px;
 }
 
 .Welcome-message {
@@ -87,7 +96,15 @@ footer {
 }
 
 @keyframes easeInAnimation {
-  0% { opacity: 0; color: ;}
-  50% {font-size: 1.6em;}
-  100% { opacity: 1 ont-size: 3.6em;;
+  0% {
+      opacity: 0;
+      color: #2785B4;
+  }
+  50% {
+      font-size: 1.6em;
+  }
+  100% {
+      opacity: 1;
+      font-size: 3.6em;
+  }
 }
