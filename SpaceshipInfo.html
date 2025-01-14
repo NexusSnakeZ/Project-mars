@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacecraft Info</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0B1121;
+        }
+        .background-image {
+            background-image: url('spacecraft-info.png');
+            background-size: contain;
+            background-position: top;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 200vh; /* So that i can show the full infographic i made*/
+        }
+        .back-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .back-button:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="history.back()">Go Back</button>
+    <div class="background-image">
+    </div>
+</body>
+</html>
