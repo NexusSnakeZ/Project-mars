@@ -20,13 +20,43 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-footer{
-   position: sticky;
-   margin-top: auto;
+    margin: 0%;
 }
 
-.ButtonDesign{
-    
+footer {
+  position: sticky;
+  margin-top: auto;
+  clip-path: polygon(50% 52%, 100% 39%, 100% 100%, 0 100%, 0 39%); /*makes the UI shape come out*/
+  background-color: #2785B4;
+  opacity: 0.7;
+  height: 200px;
+  display: flex;
+  justify-content: center;  /* Centers the buttons*/
+  align-items: center;      
+  padding: 20px;
+}
+
+.ButtonDesign {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 150px;
+  margin-bottom: 20px;
+}
+
+.ButtonDesign button {
+  background-color: #fff;
+  color: #2785B4;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ButtonDesign button:hover {
+  background-color: #2785B4;
+  color: #fff;
 }
 
