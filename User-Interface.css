@@ -1,5 +1,9 @@
-header{
+main {
+  display: flex;
 
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .Logo {
@@ -21,21 +25,22 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0%;
+    overflow: hidden;
 }
 
 footer {
   position: sticky;
+  bottom: 0;
   margin-top: auto;
-  clip-path: polygon(50% 52%, 100% 39%, 100% 100%, 0 100%, 0 39%); /*makes the UI shape come out*/
+  clip-path: polygon(50% 52%, 100% 39%, 100% 100%, 0 100%, 0 39%);
   background-color: #2785B4;
   opacity: 0.7;
   height: 200px;
   display: flex;
-  justify-content: center;  /* Centers the buttons*/
-  align-items: center;      
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
-
 .ButtonDesign {
   display: flex;
   flex-wrap: wrap;
@@ -60,3 +65,29 @@ footer {
   color: #fff;
 }
 
+.Welcome-message{
+  color: purple;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.3em;
+  animation: ease-in 0,8s;
+  margin-top: 400px;
+  margin-bottom: 400px;
+  padding-right: 0px;
+  padding-left: 0px;
+  border-left-width: 10‒;
+  border-right-width: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.Welcome-message {
+  animation: easeInAnimation 0.8s ease-in;
+}
+
+@keyframes easeInAnimation {
+  0% { opacity: 0; color: ;}
+  50% {font-size: 1.6em;}
+  100% { opacity: 1 ont-size: 3.6em;;
+}
