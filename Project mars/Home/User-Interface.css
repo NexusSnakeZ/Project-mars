@@ -48,8 +48,8 @@ footer {
   gap: 20px;  /* Increase the gap between links */
   width: 100%;
   max-width: 1100px;  /* Increase the max width of the button area */
-  padding-left: 75px;  /* Keep the padding to align with the polygon dip */
-  margin-top: 50px;  /* Move the links down by 50px */
+  padding-left: 30px;  /* Keep the padding to align with the polygon dip */
+  margin-top: 90px;  /* Move the links down by 50px */
 }
 
 .button-link {
