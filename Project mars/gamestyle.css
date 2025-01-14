@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:url(Space.png);
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  #gameCanvas {
+    border: 7px solid #efeef0;
+    border-radius: 24%;
+    background-color: #062e556f;
+    box-shadow: #652b9f 1px 3px 4px;
+  }
+
+  #score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: red 1px 1px;
+  }
